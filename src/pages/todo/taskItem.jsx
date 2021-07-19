@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { FiEdit } from "react-icons/fi";
 import { RiDeleteBinLine } from "react-icons/ri";
 import Fade from "react-reveal/Fade";
@@ -51,6 +51,7 @@ const TaskItem = (props) => {
               </Popconfirm>
               <FiEdit onClick={OnEdit} className="edit" size={"20px"} />
             </div>
+            <div className="status">{value.status}</div>
           </div>
           <div className="assignee">
             <b className="user-name">
@@ -67,7 +68,6 @@ const TaskItem = (props) => {
               <div className={value.priority}>{value.priority}</div>
             </div>
           </div>
-         
         </div>
       </Fade>
     </>
